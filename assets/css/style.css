@@ -1448,10 +1448,13 @@ footer {
 }
 
 footer img{
+  border-radius: 5%;
   max-width:150px;
   max-height:200px;
   width: auto;
   height: auto;
+  filter: opacity(30%);
+
   
 }
 
