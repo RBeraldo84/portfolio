@@ -258,12 +258,16 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encode(data)
       })
-        .then(() => {
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`Netlify form submission failed: ${response.status} ${response.statusText}`);
+          }
           status.textContent = t('contact.success');
           status.setAttribute('data-state', 'success');
           contactForm.reset();
         })
-        .catch(() => {
+        .catch((err) => {
+          console.error(err);
           status.textContent = t('contact.error');
           status.setAttribute('data-state', 'error');
         });
