@@ -1,579 +1,594 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Beraldo's Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Rodrigo Beraldo — Engenheiro de Dados Sênior</title>
+  <meta name="description" content="Rodrigo Beraldo — Especialista em Engenharia de Dados. Modernização de plataformas legadas para Lakehouse em Azure, AWS e Databricks, com experiência em B3, Brasilprev, iFood, Santander e Itaú.">
+  <meta name="keywords" content="data engineer, engenharia de dados, databricks, spark, snowflake, azure, aws, lakehouse, rodrigo beraldo">
 
   <!-- Favicons -->
-  <link href="assets/img/ideia_logo.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- Google tag (gtag.js) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBQWZ7DJR9">
- </script>
- <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
-
-  gtag('config', 'G-QBQWZ7DJR9');
- </script>
-
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QBQWZ7DJR9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-QBQWZ7DJR9');
+  </script>
 </head>
 
 <body>
 
+  <div id="preloader"></div>
+
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html">RB</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  <header id="header">
+    <div class="container">
+      <a href="#hero" class="logo">rb<span class="dot">.</span>dev<span class="cursor"></span></a>
 
-      <nav id="navbar" class="navbar">
+      <nav id="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
-          <li><a class="nav-link scrollto" href="#work">Projetos</a></li>
-          <li><a class="nav-link scrollto " href="#testimonials">clientes</a></li>
-          <li><a class="nav-link scrollto " href="#contact">Contato</a></li>      
+          <li><a class="nav-link active" href="#hero"><span class="idx">01.</span><span data-i18n="nav.home">Início</span></a></li>
+          <li><a class="nav-link" href="#about"><span class="idx">02.</span><span data-i18n="nav.about">Sobre</span></a></li>
+          <li><a class="nav-link" href="#experience"><span class="idx">03.</span><span data-i18n="nav.experience">Experiência</span></a></li>
+          <li><a class="nav-link" href="#work"><span class="idx">04.</span><span data-i18n="nav.work">Projetos</span></a></li>
+          <li><a class="nav-link" href="#passions"><span class="idx">05.</span><span data-i18n="nav.passions">Paixões</span></a></li>
+          <li><a class="nav-link" href="#contact"><span class="idx">06.</span><span data-i18n="nav.contact">Contato</span></a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-        
-      </nav><!-- .navbar -->
+        <div class="nav-socials">
+          <a href="https://github.com/RBeraldo84" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="https://www.linkedin.com/in/rodrigo-beraldo-26986220b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-btn active" data-lang="pt" aria-pressed="true" aria-label="Português (Brasil)">
+            <span class="flag" aria-hidden="true">🇧🇷</span><span class="lang-code">PT</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="English (US)">
+            <span class="flag" aria-hidden="true">🇺🇸</span><span class="lang-code">EN</span>
+          </button>
+        </div>
+      </nav>
 
+      <button class="mobile-nav-toggle" aria-label="Abrir menu" data-i18n-aria="nav.openMenu"><i class="bi bi-list"></i></button>
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/dev_caneca_batman.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">Rodrigo Beraldo</h1>
-          <p class="hero-subtitle"><span class="typed" data-typed-items="Data Analytics, Data Engineer, RPA Developer, Software Developer"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
-        </div>
-      </div>
-    </div>
-  </div><!-- End Hero Section -->
-
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/profile_rodrigo_2.png" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Rodrigo Carriño Beraldo</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Data Analytics & Engineering/Developer </span></p>
-                        <p><span class="title-s">Email: </span> <span>rodrigo.beraldo26@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>+55 (11) 99426-2962</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML5</span> <span class="pull-right">85%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">75%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">70%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PYTHON</span> <span class="pull-right">70%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>SQL</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>RPA</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Sobre mim
-                      </h5>
-                    </div>
-                    <p class="lead">
-                      Sou um desenvolvedor experiente com uma paixão por construir soluções de software de alta qualidade e inovadoras. 
-                      Tenho uma ampla gama de habilidades técnicas, incluindo habilidades em HTML, CSS, Javascript, ReactJs, React Native, Banco de dados,
-                      Criação de API's. Computação em nuvem. 
-                      Além disso, tenho uma forte compreensão dos princípios de design de software, o que me permite criar soluções escaláveis e de alta performance. 
-                      Adoro trabalhar em equipe e colaborar com outros profissionais para alcançar objetivos comuns.
-                    </p>
-                    <p class="lead">
-                      Também atuo com forte compreensão dos métodos e técnicas de análise de dados.
-                      Tenho experiência em coletar, processar e analisar grandes conjuntos de dados para extrair insights valiosos e apoiar a tomada de decisões estratégicas. 
-                      Possuo habilidades sólidas em Python, SQL, MongoDB, PowerBI, Tableau, Knime, Alteryx, Databricks e PySpark. Construção de Data Pipelines em ambientes Cloud (Aws, Azure e GCP) e On Premise. 
-                      O que me permite transformar dados brutos em visualizações informativas e fáceis de entender. 
-                      Procuro oportunidades para aplicar minhas habilidades, solucionar problemas complexos e fornecer soluções baseadas em dados.
-                    </p>
+    <!-- ======= Hero ======= -->
+    <section id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="hero-eyebrow"><span class="status-dot"></span><span data-i18n="hero.eyebrow">Engenheiro de Dados Sênior · São Paulo, Brasil</span></p>
+          <h1 class="hero-title">Rodrigo Beraldo</h1>
+          <p class="hero-role"><span class="prompt">&gt;</span> <span class="typed" data-typed-items="Data Developer & Engineer, Senior Data Engineer, Lakehouse Architect"></span></p>
+          <p class="hero-lead" data-i18n="hero.lead">
+            Ajudo empresas a evoluir plataformas de dados legadas para arquiteturas modernas, escaláveis e prontas
+            para IA — conectando as necessidades do negócio a soluções sustentáveis, do primeiro Data Lake ao Lakehouse.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary" data-i18n="hero.btnProjects">Ver projetos</a>
+            <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Falar comigo</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="num"><span class="purecounter accent" data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1.4">0</span>+</div>
+              <div class="label" data-i18n="hero.statYears">Anos de experiência</div>
+            </div>
+            <div class="stat">
+              <div class="num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1.4">0</span></div>
+              <div class="label" data-i18n="hero.statCompanies">Empresas atendidas</div>
+            </div>
+            <div class="stat">
+              <div class="num"><span class="purecounter" data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1.4">0</span></div>
+              <div class="label" data-i18n="hero.statProjects">Projetos em destaque</div>
+            </div>
+          </div>
+        </div>
 
-                  </div>
+        <div class="hero-visual">
+          <div class="term-window">
+            <div class="term-titlebar">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+              <span>about.json</span>
+            </div>
+            <div class="term-body">
+              <span class="punc">{</span>
+              <span class="indent"><span class="key">"name"</span><span class="punc">:</span> <span class="str">"Rodrigo Carriño Beraldo"</span><span class="punc">,</span></span>
+              <span class="indent"><span class="key">"role"</span><span class="punc">:</span> <span class="str">"Data Developer & Engineer"</span><span class="punc">,</span></span>
+              <span class="indent"><span class="key">"stack"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"Python"</span><span class="punc">, </span><span class="str">"Spark"</span><span class="punc">, </span><span class="str">"Databricks"</span><span class="punc">, </span><span class="str">"Azure"</span><span class="punc">, </span><span class="str">"AWS"</span><span class="punc">, </span><span class="str">"DataViz"</span><span class="punc">],</span></span>
+              <span class="indent"><span class="key">"focus"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"Data Pipelines"</span><span class="punc">, </span><span class="str">"AI Agents"</span><span class="punc">, </span><span class="str">"Data Apps Development"</span><span class="punc">],</span></span>
+              <span class="indent"><span class="key">"email"</span><span class="punc">:</span> <span class="str">"rodrigo.beraldo26@gmail.com"</span></span>
+              <span class="punc">}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Hero -->
+
+    <!-- ======= About ======= -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">Sobre mim</p>
+          <h2 data-i18n="about.title">Dados, código e uma paixão por resolver problemas</h2>
+        </div>
+
+        <div class="pipeline-window reveal">
+          <div class="term-titlebar">
+            <span class="term-dot red"></span>
+            <span class="term-dot yellow"></span>
+            <span class="term-dot green"></span>
+            <span>assemble_profile.py</span>
+          </div>
+          <div class="pipeline-window-body">
+            <p class="pipeline-caption" data-i18n="about.pipelineCaption">// pipeline de dados montando o perfil</p>
+            <div class="photo-pipeline-banner">
+              <div class="scatter-zone" aria-hidden="true">
+                <div class="scatter-status">
+                  <i class="bi bi-check-circle"></i>
+                  <span data-i18n="about.pipelineDone">pipeline concluído</span>
+                </div>
+              </div>
+              <div class="pipe-zone" aria-hidden="true">
+                <div class="pipe-track"></div>
+                <i class="bi bi-chevron-double-right pipe-arrow"></i>
+              </div>
+              <div class="assembly-frame">
+                <img src="assets/img/profile_rodrigo_2.png" alt="Foto de Rodrigo Beraldo" data-i18n-alt="about.photoAlt">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo reveal">
+            <div class="about-facts-title" data-i18n="about.factsTitle">// dados de contato</div>
+            <ul class="about-facts">
+              <li><i class="bi bi-person"></i><span data-i18n="about.fact.name">Nome</span><span>Rodrigo C. Beraldo</span></li>
+              <li><i class="bi bi-briefcase"></i><span data-i18n="about.fact.role">Atuação</span><span data-i18n="about.fact.roleValue">Especialista em Engenharia de Dados</span></li>
+              <li><i class="bi bi-geo-alt"></i><span data-i18n="about.fact.location">Local</span><span data-i18n="about.fact.locationValue">São Paulo, SP</span></li>
+              <li><i class="bi bi-envelope"></i><span data-i18n="about.fact.email">Email</span><a href="mailto:rodrigo.beraldo26@gmail.com">rodrigo.beraldo26@gmail.com</a></li>
+              <li><i class="bi bi-telephone"></i><span data-i18n="about.fact.phone">Telefone</span><span>+55 (11) 99426-2962</span></li>
+            </ul>
+          </div>
+
+          <div class="about-body reveal">
+            <h3 data-i18n="about.heading">Sobre mim</h3>
+            <p data-i18n="about.p1">
+              Sou especialista em Engenharia de Dados e gosto de resolver o problema por trás do problema: entender
+              como o negócio realmente usa os dados para então desenhar arquiteturas simples de manter, fáceis de
+              confiar e prontas para crescer — em vez de simplesmente trocar uma tecnologia por outra.
+            </p>
+            <p data-i18n="about.p2">
+              Ao longo da minha trajetória, liderei a modernização de plataformas de dados em bancos, seguradoras e
+              empresas de tecnologia: migrei processos legados para arquiteturas Lakehouse, reduzi a latência de
+              dados de horas para segundos com streaming e CDC, e criei produtos de dados que aproximam times de
+              negócio e de tecnologia. Mais recentemente, também tenho aplicado Inteligência Artificial à própria
+              Engenharia de Dados, acelerando desenvolvimento, documentação e tomada de decisão.
+            </p>
+
+            <div class="skills-block">
+              <h4 data-i18n="about.skillsTitle1">Como eu entrego valor</h4>
+              <div class="skill-group">
+                <div class="chips">
+                  <span class="tag" data-i18n="about.chip.agility">Agilidade</span>
+                  <span class="tag" data-i18n="about.chip.valueDelivery">Entrega de Valor</span>
+                  <span class="tag" data-i18n="about.chip.teamFacilitator">Facilitador de Times</span>
+                  <span class="tag" data-i18n="about.chip.businessAcumen">Trato com o Negócio</span>
+                  <span class="tag" data-i18n="about.chip.architecture">Arquitetura & Governança</span>
+                </div>
+              </div>
+
+              <h4 data-i18n="about.skillsTitle2">Tecnologias que uso</h4>
+              <div class="skill-group">
+                <div class="chips">
+                  <span class="tag">Python & SQL</span>
+                  <span class="tag">Apache Spark</span>
+                  <span class="tag">Databricks</span>
+                  <span class="tag">Kafka</span>
+                  <span class="tag">Azure</span>
+                  <span class="tag">AWS</span>
+                  <span class="tag">Snowflake</span>
+                  <span class="tag">Power BI / Tableau</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-block">
+              <h4 data-i18n="about.eduTitle">Formação</h4>
+              <ul class="edu-list">
+                <li><span class="year" data-i18n="about.edu0Year">Em andamento</span><span data-i18n="about.edu0">Pós-graduação em Matemática Aplicada à Computação — Anhanguera</span></li>
+                <li><span class="year">2021</span><span data-i18n="about.edu1">MBA em Big Data e Business Intelligence — Escola de Negócios Europeia de Barcelona</span></li>
+                <li><span class="year">2021</span><span data-i18n="about.edu2">Licenciatura em Matemática — Universidade Cruzeiro do Sul</span></li>
+                <li><span class="year">2012</span><span data-i18n="about.edu3">Economia e Finanças — Universidade Paulista</span></li>
+              </ul>
+
+              <h4 data-i18n="about.langTitle">Idiomas</h4>
+              <div class="skill-group">
+                <div class="chips">
+                  <span class="tag" data-i18n="about.lang1">Inglês — Avançado</span>
+                  <span class="tag" data-i18n="about.lang2">Espanhol — Intermediário</span>
+                  <span class="tag" data-i18n="about.lang3">Italiano — Básico</span>
+                  <span class="tag" data-i18n="about.lang4">Francês — Básico</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End About -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
+    <!-- ======= Experience ======= -->
+    <section id="experience">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Habilidades
-              </h3>
-              <p class="subtitle-a">
-                Atuações.
-              </p>
-              <div class="line-mf"></div>
-            </div>
-          </div>
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="experience.eyebrow">Experiência</p>
+          <h2 data-i18n="experience.title">Minha trajetória</h2>
+          <p data-i18n="experience.lead">8+ anos resolvendo problemas de dados em bancos, seguradoras, fintechs e empresas de tecnologia.</p>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-logo timeline-logo--light"><img src="clients/b3.png" alt="B3"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>B3 S.A. <span class="role" data-i18n="exp.b3.role">— Engenheiro de Dados Sênior</span></h3>
+                <span class="badge" data-i18n="exp.b3.badge">Atual · Ago 2026</span>
               </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                  Aplicar conhecimento técnico em páginas da internet, para produzir conteúdo visualmente atraente e intuitivo. 
-                  Garantir performance aos usuários.
-                </p>
-              </div>
+              <p data-i18n="exp.b3.desc">Lidero a arquitetura e modernização da plataforma de dados da bolsa brasileira, migrando soluções legadas — SQL Server, procedures, fluxos Alteryx e processamento de arquivos — para uma arquitetura Lakehouse no Databricks, avaliando não só a conversão tecnológica dos workloads, mas também a adequação das regras de negócio ao novo ambiente. Atuo como referência técnica do time, definindo padrões arquiteturais e componentes reutilizáveis para acelerar a migração de novos workloads.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-logo"><img src="clients/brasilprev.jpeg" alt="Brasilprev"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>Brasilprev <span class="role" data-i18n="exp.brasilprev.role">— Engenheiro de Dados Sênior</span></h3>
+                <span class="badge" data-i18n="exp.brasilprev.badge">Mar 2025 – Ago 2026</span>
               </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                  Projetar, criar e manter sites e aplicativos web. 
-                  Estruturar um site e garantir que tudo funcione de acordo com o esperado. 
-                  Acompanhamento de mercado.
-                </p>
-              </div>
+              <p data-i18n="exp.brasilprev.desc">Liderei a modernização da ingestão de dados, evoluindo de Azure Data Factory para Databricks Lakeflow Connect, com Kafka como motor de streaming e CDC em tempo real — reduzindo a latência dos dados e melhorando os SLAs para os consumidores analíticos. Idealizei e construí o catálogo corporativo de dados com Databricks Apps e IA integrada para orientar os usuários, apliquei modelagem Data Vault para reforçar governança e privacidade, e implantei observabilidade com Datadog e Grafana para detectar falhas antes que virassem incidentes.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-bar-chart"></i></span>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-logo"><img src="clients/ifood.png" alt="iFood"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>iFood <span class="role" data-i18n="exp.ifood.role">— Engenheiro de Dados Sênior</span></h3>
+                <span class="badge" data-i18n="exp.ifood.badge">Nov 2024 – Mar 2025</span>
               </div>
-              <div class="service-content">
-                <h2 class="s-title">Data Analytics</h2>
-                <p class="s-description text-center">
-                  Coletar, organizar e analisar dados para obter insights e informações valiosas.
-                  Identificar os melhores métodos para usar os dados e identificar padrões.
-                </p>
-              </div>
+              <p data-i18n="exp.ifood.desc">Otimizei pipelines e queries PySpark no Databricks, rodando em Azure e AWS, reduzindo o tempo de processamento e a complexidade para o usuário final. Revisei arquiteturas legadas para construir novos produtos de dados, integrei serviços com AWS SNS/SQS para mensageria assíncrona, automatizei infraestrutura com Terraform e implementei testes automatizados (pytest/unittest) para aumentar a confiabilidade das entregas.</p>
             </div>
-          </div> 
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-logo"><img src="assets/img/santander.png" alt="Santander"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>Santander – Getnet <span class="role" data-i18n="exp.santander.role">— Engenheiro de Dados</span></h3>
+                <span class="badge" data-i18n="exp.santander.badge">Out 2023 – Nov 2024</span>
+              </div>
+              <p data-i18n="exp.santander.desc">Participei ativamente da construção do primeiro Data Lake da companhia, migrando dados on-premise para a nuvem com Azure Blob Storage, Azure Data Factory, Databricks e Snowflake. Integrei fontes diversas — Oracle, SQL Server, MongoDB, APIs e dados quase em tempo real (NRT) — garantindo integridade e alta disponibilidade, e desenvolvi uma plataforma de BI self-service com conceitos de Data Mesh, dando autonomia aos times de negócio para explorar os dados sem depender de filas de TI.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-logo"><img src="assets/img/itau.jpg" alt="Itaú"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>Banco Itaú <span class="role" data-i18n="exp.itau.role">— Engenheiro de Dados</span></h3>
+                <span class="badge" data-i18n="exp.itau.badge">Set 2022 – Out 2023</span>
+              </div>
+              <p data-i18n="exp.itau.desc">Migrei a camada de dados local para a nuvem AWS (S3, Redshift, Glue) e construí, do zero, o sistema de NPS e Precificação já nativo na nuvem, consumindo microsserviços em tempo real — resultado que elevou de forma consistente o NPS da área. Participei do projeto de migração On-Premise → AWS e criei sistemas de captação de dados com Python, Knime, Alteryx e Pentaho, padronizando as informações para os Data Warehouses da empresa.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-logo"><img src="assets/img/antlia.png" alt="Antlia Tecnologia"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>Antlia Tecnologia <span class="role" data-i18n="exp.antlia.role">— Analista de Dados</span></h3>
+                <span class="badge" data-i18n="exp.antlia.badge">Jul 2021 – Ago 2022</span>
+              </div>
+              <p data-i18n="exp.antlia.desc">Atuei em fábrica de software tratando dados de clientes do setor bancário: transformação de bases vindas de SQL Server e SAS, criação de Stored Procedures, views e joins para consultas de alta performance, e cargas de ETL com SSIS — sempre dentro de um ritmo ágil de entregas contínuas.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-logo"><img src="assets/img/deal.png" alt="Deal Technologies"></div>
+            <div class="timeline-card">
+              <div class="row-top">
+                <h3>Deal Technologies <span class="role" data-i18n="exp.deal.role">— Analista de Dados Financeiros</span></h3>
+                <span class="badge" data-i18n="exp.deal.badge">Set 2020 – Jun 2021</span>
+              </div>
+              <p data-i18n="exp.deal.desc">Extraí, limpei e modelei dados financeiros para criar visualizações que facilitassem a análise, automatizei rotinas manuais com RPA e Python, e construí dashboards interativos em Power BI que davam às equipes insights rápidos e acionáveis sobre faturamento e indicadores financeiros.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="clients-strip reveal">
+          <h4 data-i18n="experience.clientsTitle">Outros clientes atendidos via Beraldo Coders BR</h4>
+          <div class="logo-grid">
+            <div class="logo-box"><img src="clients/yum.png" alt="Yum!"></div>
+            <div class="logo-box"><img src="clients/pizza.png" alt="Pizza Hut"></div>
+            <div class="logo-box"><img src="clients/terra_nova.png" alt="Terra Nova"></div>
           </div>
         </div>
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Experience -->
 
- 
-     <!-- ======= Testimonials Section ======= -->
-     <section id = 'testimonials'>
+    <!-- ======= Projects ======= -->
+    <section id="work">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                 Clientes
-               </h3>
-                  <p class="subtitle-a">
-        Abaixo alguns dos clientes atendidos.
-      <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
-        <div class="overlay-mf"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-  
-              <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-                <div class="swiper-wrapper">
-  
-                  <div class="swiper-slide">
-                    <div class="testimonial-box">
-                      <div class="author-test">
-                        <img src="assets/img/itau.jpg" alt="" class="rounded-circle b-shadow-a">
-                        <span class="author">Itaú</span>
-                      </div>
-                      <div class="content-test">
-                        <p class="description lead">
-                          Grande player do setor bancário. Apoio em projetos de Engenharia e Análise de Dados.
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-  
-                  <div class="swiper-slide">
-                    <div class="testimonial-box">
-                      <div class="author-test">
-                        <img src="assets/img/antlia.png" alt="" class="rounded-circle b-shadow-a">
-                        <span class="author">Antlia Tecnologia</span>
-                      </div>
-                      <div class="content-test">
-                        <p class="description lead">
-                          Atividades de análise e desenvolvimento de sistemas e dados.
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-  
-                  <div class="swiper-slide">
-                    <div class="testimonial-box">
-                      <div class="author-test">
-                        <img src="assets/img/deal.png" alt="" class="rounded-circle b-shadow-a">
-                        <span class="author">Deal Technologies</span>
-                      </div>
-                      <div class="content-test">
-                        <p class="description lead">
-                         Análise de Dados e desenvolvimento de painéis com indicadores financeiros.
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-box">
-                      <div class="author-test">
-                        <img src="assets/img/santander.png" alt="" class="rounded-circle b-shadow-a">
-                        <span class="author">Santander</span>
-                      </div>
-                      <div class="content-test">
-                        <p class="description lead">
-                        Construção de Data Lake - BR. Migração de Dados para Cloud
-                        </p>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-
-
-  
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-  
-              <!-- <div id="testimonial-mf" class="owl-carousel owl-theme">
-            
-          </div> -->
-            </div>
-          </div>
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="work.eyebrow">Portfólio</p>
+          <h2 data-i18n="work.title">Projetos em destaque</h2>
+          <p data-i18n="work.lead">Uma seleção de dashboards, pipelines e automações implementados em clientes.</p>
         </div>
-      </div>
-    </section><!-- End Testimonials Section -->
-  
 
+        <div class="work-grid">
 
+          <a href="https://www.loom.com/share/1f3eb8aaa83442a08f61236fe1eb0d0b" target="_blank" rel="noopener" class="work-card reveal">
+            <div class="work-thumb">
+              <img src="projects/demo.jpeg" alt="Databricks Lakeflow Declarative Pipelines vs ADF - Brasilprev">
+              <div class="play"><i class="bi bi-play-fill"></i></div>
+            </div>
+            <div class="work-content">
+              <span class="work-kicker">Data Engineering</span>
+              <h3>Lakeflow Declarative Pipelines vs. ADF — Brasilprev</h3>
+              <p data-i18n="work.card1.desc">Comparativo entre o Databricks Lakeflow (Delta Live Tables) e o modelo atual de ingestão via Azure Data Factory, com streaming Kafka e réplica automática entre as camadas bronze e silver.</p>
+              <div class="work-stack"><span>Databricks</span><span>Kafka</span><span>DLT</span><span>Azure Data Factory</span></div>
+            </div>
+          </a>
 
+          <a href="projects/streamlit-databricks-app.svg" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="projects/streamlit-databricks-app.svg" alt="Data app de vendas com Databricks Apps e Streamlit" data-i18n-alt="work.card2.alt">
+            </div>
+            <div class="work-content">
+              <span class="work-kicker" data-i18n="work.card2.kicker">Data Apps</span>
+              <h3 data-i18n="work.card2.title">Dashboard de Vendas — Databricks Apps + Streamlit</h3>
+              <p data-i18n="work.card2.desc">Data app interativo publicado como Databricks App, com Streamlit consumindo tabelas Delta via Unity Catalog para acompanhar metas, ticket médio e performance em tempo real.</p>
+              <div class="work-stack"><span>Databricks Apps</span><span>Streamlit</span><span>Python</span><span>Unity Catalog</span></div>
+            </div>
+          </a>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Portfólio
-              </h3>
-              <p class="subtitle-a">
-                Alguns dos projetos implementados em clientes.
-              </p>
-              <div class="line-mf"></div>
+          <a href="https://youtu.be/0PoiW9P2fC8" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="assets/img/deal_dash.JPG" alt="Dashboard de faturamento Deal Technologies">
+              <div class="play"><i class="bi bi-play-fill"></i></div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://youtu.be/0PoiW9P2fC8" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/deal_dash.JPG" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Dashboard 1</h2>
-                   
-                  </div>
-                  <div class="col-sm-4">
-                    
-                  </div>
-                </div>
-              </div>
+            <div class="work-content">
+              <span class="work-kicker">Power BI</span>
+              <h3>Dashboard de Faturamento — Deal Technologies</h3>
+              <p data-i18n="work.card3.desc">Faturamento previsto x realizado, forecast e metas por cliente.</p>
+              <div class="work-stack"><span>Power BI</span><span>DAX</span></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://youtu.be/2bvAp-7ldtU" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/boto.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Dashboard 2</h2>
-                    
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                     
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </a>
+
+          <a href="https://youtu.be/N7VrIpsQvks" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="assets/img/billing_deal.JPG" alt="Dashboard de billing Deal Technologies">
+              <div class="play"><i class="bi bi-play-fill"></i></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://youtu.be/N7VrIpsQvks" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/billing_deal.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Dashboard 3</h2>
-                    
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="work-content">
+              <span class="work-kicker">Power BI</span>
+              <h3>Dashboard de Billing — Deal Technologies</h3>
+              <p data-i18n="work.card4.desc">Acompanhamento de valor bruto mensal e localização de clientes.</p>
+              <div class="work-stack"><span>Power BI</span><span>Maps</span></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/python_codes.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/python_codes.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Python Analytics</h2>
-                    
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </a>
+
+          <a href="assets/img/data-pipeline-ra.png" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="assets/img/data-pipeline-ra.png" alt="Arquitetura de data pipeline na AWS">
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/data-pipeline-ra.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/data-pipeline-ra.png" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Engenharia de Dados - Data Pipelines</h2>
-                   
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="work-content">
+              <span class="work-kicker">Data Engineering</span>
+              <h3 data-i18n="work.card5.title">Arquitetura de Data Pipeline — AWS</h3>
+              <p data-i18n="work.card5.desc">Ingestão, orquestração e processamento de dados de ponta a ponta na nuvem.</p>
+              <div class="work-stack"><span>AWS Glue</span><span>S3</span><span>Kinesis</span><span>Redshift</span></div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="https://beraldocoders.netlify.app" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/bdocers.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Sites Personalizados</h2>
-                    
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </a>
+
+          <a href="projects/spark-snowflake-ai.svg" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="projects/spark-snowflake-ai.svg" alt="Pipeline de dados com Spark, Snowflake e IA">
             </div>
-          </div>
+            <div class="work-content">
+              <span class="work-kicker">Data Engineering</span>
+              <h3 data-i18n="work.card6.title">Data Engineering & IA — Spark + Snowflake</h3>
+              <p data-i18n="work.card6.desc">Processamento distribuído de grandes volumes de dados com Apache Spark, carga em Data Warehouse na Snowflake e aplicação de modelos de IA para gerar insights a partir dos dados.</p>
+              <div class="work-stack"><span>Spark</span><span>Snowflake</span><span data-i18n="work.card6.stackAI">IA</span><span>Python</span></div>
+            </div>
+          </a>
+
+          <a href="projects/genie-ontology.svg" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="projects/genie-ontology.svg" alt="Consultas em linguagem natural com Databricks Genie e Ontology" data-i18n-alt="work.card7.alt">
+            </div>
+            <div class="work-content">
+              <span class="work-kicker" data-i18n="work.card7.kicker">IA</span>
+              <h3 data-i18n="work.card7.title">Consultas em Linguagem Natural — Genie + Ontology</h3>
+              <p data-i18n="work.card7.desc">Modelagem de uma camada semântica (Ontology) no Unity Catalog para alimentar o Databricks Genie, permitindo que áreas de negócio façam perguntas em linguagem natural e recebam respostas confiáveis, sem escrever SQL.</p>
+              <div class="work-stack"><span>Databricks Genie</span><span>Ontology</span><span>Unity Catalog</span></div>
+            </div>
+          </a>
+
+          <a href="assets/img/python_codes.JPG" data-gallery="portfolioGallery" class="work-card portfolio-lightbox reveal">
+            <div class="work-thumb">
+              <img src="assets/img/python_codes.JPG" alt="Notebook Python com visualização de dados">
+            </div>
+            <div class="work-content">
+              <span class="work-kicker">Python</span>
+              <h3 data-i18n="work.card8.title">Visualização de Dados — Python</h3>
+              <p data-i18n="work.card8.desc">Notebooks com Plotly para mapas e análises exploratórias interativas.</p>
+              <div class="work-stack"><span>Python</span><span>Plotly</span></div>
+            </div>
+          </a>
+
+          <a href="https://beraldocoders.netlify.app" target="_blank" rel="noopener" class="work-card reveal">
+            <div class="work-thumb">
+              <img src="assets/img/bdocers.jpg" alt="Site institucional Beraldo Coders BR">
+            </div>
+            <div class="work-content">
+              <span class="work-kicker">Web Dev</span>
+              <h3 data-i18n="work.card9.title">Sites Personalizados — Beraldo Coders BR</h3>
+              <p data-i18n="work.card9.desc">Desenvolvimento de sites institucionais sob medida para clientes.</p>
+              <div class="work-stack"><span>HTML/CSS</span><span>JavaScript</span></div>
+            </div>
+          </a>
 
         </div>
       </div>
-    </section><!-- End Portfolio Section -->
+    </section><!-- End Projects -->
 
-   
-
-    <!-- ======= Blog Section ======= -->
-    
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
+    <!-- ======= Passions ======= -->
+    <section id="passions">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Mensagem
-                      </h5>
-                    </div>
-                    <div>
-                      
-                        <div class="row">
-                          
-                       
-                          <div class="col-md-12 text-center">
-                            <a href="https://form.jotform.com/230415853332046" target="blank"><button type="submit" class="button button-a button-big button-rouded">Clique para enviar a sua mensagem</button></a>
-                          </div>
-                        </div>
-                      
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Entre em Contato
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <p class="lead">
-                        Precisa de mais detalhes? Envie a sua mensagem que logo entrarei em contato ;)
-                      </p>
-                      <ul class="list-ico">
-                        
-                        <li><span class="bi bi-phone"></span> +55(11)99426-2962</li>
-                        <li><span class="bi bi-envelope"></span> rodrigo@beraldocoders.com.br</li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="mailto:rodrigo@beraldocoders.com.br?subject=Contato"><span class="ico-circle"><i class="bi bi-envelope"></i></span></a></li>
-                        <li><a href="https://api.whatsapp.com/send?phone=5511994262962", target="_blank"><span class="ico-circle"><i class="bi bi-whatsapp"></i></span></a></li>
-                        <li><a href="https://github.com/RBeraldo84", target="_blank"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/rodrigo-beraldo-26986220b/", target="_blank"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                        
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="passions.eyebrow">Fora do código</p>
+          <h2 data-i18n="passions.title">O que me inspira fora do trabalho</h2>
+          <p data-i18n="passions.lead">Correr, ler e tocar guitarra são o meu contraponto ao teclado — energia que eu trago de volta para resolver problemas de dados.</p>
+        </div>
+
+        <div class="passion-grid">
+          <div class="passion-card reveal">
+            <div class="passion-thumb">
+              <a href="passionate/leitura-1.jpg" data-gallery="passion-leitura" class="passion-cover passion-lightbox">
+                <img src="passionate/leitura-1.jpg" alt="Livros sobre IA e engenharia de dados" data-i18n-alt="passions.leitura.alt">
+              </a>
+              <div class="passion-extra">
+                <a href="passionate/leitura-2.jpg" data-gallery="passion-leitura" class="passion-lightbox" aria-label="Mais uma foto de leitura" style="background-image:url(passionate/leitura-2.jpg)"></a>
+                <a href="passionate/leitura-3.jpg" data-gallery="passion-leitura" class="passion-lightbox" aria-label="Mais uma foto de leitura" style="background-image:url(passionate/leitura-3.jpg)"></a>
               </div>
+            </div>
+            <div class="passion-content">
+              <span class="passion-kicker" data-i18n="passions.leitura.kicker">Leitura</span>
+              <h3 data-i18n="passions.leitura.title">Sempre um livro técnico na mesa</h3>
+              <p data-i18n="passions.leitura.desc">Gosto de me manter atualizado com o que há de mais recente em IA e engenharia de dados — de LLMs a arquiteturas de produção.</p>
+            </div>
+          </div>
+
+          <div class="passion-card reveal">
+            <div class="passion-thumb">
+              <a href="passionate/corrida-1.jpg" data-gallery="passion-corrida" class="passion-cover passion-lightbox">
+                <img src="passionate/corrida-1.jpg" alt="Medalha de finisher em corrida de rua" data-i18n-alt="passions.corrida.alt">
+              </a>
+            </div>
+            <div class="passion-content">
+              <span class="passion-kicker" data-i18n="passions.corrida.kicker">Corrida</span>
+              <h3 data-i18n="passions.corrida.title">Correndo pelas ruas de São Paulo</h3>
+              <p data-i18n="passions.corrida.desc">Participo de corridas de rua pela cidade — a disciplina da corrida lembra a de um bom pipeline de dados: constância importa mais que velocidade.</p>
+            </div>
+          </div>
+
+          <div class="passion-card reveal">
+            <div class="passion-thumb">
+              <a href="passionate/musica-1.jpg" data-gallery="passion-musica" class="passion-cover passion-lightbox">
+                <img src="passionate/musica-1.jpg" alt="Tocando guitarra em um show" data-i18n-alt="passions.musica.alt">
+              </a>
+            </div>
+            <div class="passion-content">
+              <span class="passion-kicker" data-i18n="passions.musica.kicker">Música</span>
+              <h3 data-i18n="passions.musica.title">Guitarra como válvula de escape</h3>
+              <p data-i18n="passions.musica.desc">Toco guitarra nas horas vagas — o hobby que desliga a lógica e liga a criatividade.</p>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Passions -->
+
+    <!-- ======= Contact ======= -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contato</p>
+          <h2 data-i18n="contact.title">Vamos conversar sobre o seu próximo projeto?</h2>
+        </div>
+
+        <div class="contact-grid reveal">
+          <div class="contact-col">
+            <h3 data-i18n="contact.colTitle">Entre em contato</h3>
+            <p data-i18n="contact.colLead">Precisa de mais detalhes? Envie a sua mensagem que logo entrarei em contato.</p>
+            <ul class="contact-list">
+              <li><i class="bi bi-envelope"></i> rodrigo.beraldo26@gmail.com</li>
+              <li><i class="bi bi-phone"></i> +55 (11) 99426-2962</li>
+            </ul>
+            <div class="socials">
+              <a href="mailto:rodrigo.beraldo26@gmail.com?subject=Contato" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=5511994262962" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://github.com/RBeraldo84" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/rodrigo-beraldo-26986220b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="contact-cta">
+            <h3 data-i18n="contact.ctaTitle">Envie uma mensagem</h3>
+            <p data-i18n="contact.ctaLead">Conte um pouco sobre o seu projeto e eu retorno o mais rápido possível.</p>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" id="contact-form">
+              <input type="hidden" name="form-name" value="contact">
+              <p class="hp-field"><label><span data-i18n="contact.formHoneypot">Não preencha este campo: </span><input name="bot-field"></label></p>
+              <div class="form-row">
+                <input type="text" name="name" placeholder="Seu nome" data-i18n-placeholder="contact.formName" required>
+              </div>
+              <div class="form-row">
+                <input type="email" name="email" placeholder="Seu email" data-i18n-placeholder="contact.formEmail" required>
+              </div>
+              <div class="form-row">
+                <textarea name="message" placeholder="Conte um pouco sobre o seu projeto" data-i18n-placeholder="contact.formMessage" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit">Enviar mensagem</button>
+              <p class="form-status" data-state="idle"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer>
-    <img src="assets/img/logo_beraldocoders.JPG" alt="logo">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>Beraldo Coders BR</strong>. Todos os direitos reservados</p>
-            <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
-            </div>
-          </div>
-        </div>
+      <p class="copyright">&copy; <span id="year"></span> <strong>Beraldo Coders BR</strong>. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+      <div class="socials">
+        <a href="https://github.com/RBeraldo84" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/rodrigo-beraldo-26986220b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer><!-- End Footer -->
 
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#hero" class="back-to-top" aria-label="Voltar ao topo" data-i18n-aria="footer.backToTop"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- i18n + Main JS -->
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
