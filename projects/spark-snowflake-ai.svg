@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3ddc97"/>
+    </marker>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ddc97" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#5b8cff" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="500" fill="#10151f"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+
+  <!-- title bar -->
+  <rect x="0" y="0" width="800" height="46" fill="#141b28"/>
+  <line x1="0" y1="46" x2="800" y2="46" stroke="#212a3a" stroke-width="1"/>
+  <circle cx="26" cy="23" r="6" fill="#ff5f56"/>
+  <circle cx="46" cy="23" r="6" fill="#ffbd2e"/>
+  <circle cx="66" cy="23" r="6" fill="#27c93f"/>
+  <text x="740" y="27" text-anchor="end" font-size="13" fill="#616d82">pipeline.py</text>
+
+  <!-- stage boxes -->
+  <!-- Sources -->
+  <g>
+    <rect x="40" y="200" width="150" height="110" rx="12" fill="#141b28" stroke="#212a3a"/>
+    <text x="115" y="245" text-anchor="middle" font-size="15" fill="#e7ebf3" font-weight="600">Fontes</text>
+    <text x="115" y="266" text-anchor="middle" font-size="12" fill="#9aa5b8">APIs · DBs</text>
+    <text x="115" y="282" text-anchor="middle" font-size="12" fill="#9aa5b8">Arquivos</text>
+  </g>
+
+  <!-- Spark -->
+  <g>
+    <rect x="240" y="180" width="160" height="150" rx="12" fill="#141b28" stroke="#3ddc97" stroke-opacity="0.4"/>
+    <path d="M330 200 L308 240 L326 240 L312 268 L342 228 L322 228 Z" fill="#3ddc97"/>
+    <text x="320" y="290" text-anchor="middle" font-size="15" fill="#e7ebf3" font-weight="600">Apache Spark</text>
+    <text x="320" y="309" text-anchor="middle" font-size="11.5" fill="#9aa5b8">ETL distribuído</text>
+  </g>
+
+  <!-- Snowflake -->
+  <g>
+    <rect x="450" y="180" width="160" height="150" rx="12" fill="#141b28" stroke="#5b8cff" stroke-opacity="0.4"/>
+    <g transform="translate(530,232)" stroke="#5b8cff" stroke-width="3" stroke-linecap="round">
+      <line x1="0" y1="-22" x2="0" y2="22"/>
+      <line x1="-19" y1="-11" x2="19" y2="11"/>
+      <line x1="19" y1="-11" x2="-19" y2="11"/>
+      <line x1="0" y1="-22" x2="-7" y2="-14"/>
+      <line x1="0" y1="-22" x2="7" y2="-14"/>
+      <line x1="0" y1="22" x2="-7" y2="14"/>
+      <line x1="0" y1="22" x2="7" y2="14"/>
+    </g>
+    <text x="530" y="290" text-anchor="middle" font-size="15" fill="#e7ebf3" font-weight="600">Snowflake</text>
+    <text x="530" y="309" text-anchor="middle" font-size="11.5" fill="#9aa5b8">Data Warehouse</text>
+  </g>
+
+  <!-- AI -->
+  <g>
+    <rect x="660" y="200" width="110" height="110" rx="12" fill="#141b28" stroke="#212a3a"/>
+    <circle cx="715" cy="240" r="14" fill="none" stroke="#3ddc97" stroke-width="2.5"/>
+    <circle cx="715" cy="240" r="4" fill="#3ddc97"/>
+    <line x1="715" y1="226" x2="715" y2="216" stroke="#3ddc97" stroke-width="2.5"/>
+    <line x1="729" y1="240" x2="739" y2="240" stroke="#3ddc97" stroke-width="2.5"/>
+    <line x1="715" y1="254" x2="715" y2="264" stroke="#3ddc97" stroke-width="2.5"/>
+    <line x1="701" y1="240" x2="691" y2="240" stroke="#3ddc97" stroke-width="2.5"/>
+    <text x="715" y="280" text-anchor="middle" font-size="14" fill="#e7ebf3" font-weight="600">IA / ML</text>
+    <text x="715" y="297" text-anchor="middle" font-size="11" fill="#9aa5b8">Insights</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="190" y1="255" x2="235" y2="255" stroke="#3ddc97" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="255" x2="445" y2="255" stroke="#3ddc97" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="610" y1="255" x2="655" y2="255" stroke="#3ddc97" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- footer terminal line -->
+  <text x="40" y="380" font-size="13" fill="#5b8cff">&gt;</text>
+  <text x="58" y="380" font-size="13" fill="#9aa5b8">spark.read(sources).write(</text>
+  <tspan></tspan>
+  <text x="40" y="400" font-size="13" fill="#9aa5b8">    "snowflake").then(model.predict)</text>
+
+  <text x="40" y="450" font-size="16" fill="#e7ebf3" font-weight="600">Data Engineering &amp; AI Pipeline</text>
+  <text x="40" y="472" font-size="12.5" fill="#9aa5b8">Processamento distribuído com Spark, Data Warehouse na Snowflake e modelos de IA aplicados aos dados.</text>
+</svg>
